@@ -1,0 +1,49 @@
+en:
+  scratchpad_tooltip: Type your answers in the left box, and the resulting Markdown appears in the right box. When your answer is correct, you'll be taken to the next lesson
+  on_to_next_lesson: On to to the next lesson!
+
+  layout:
+    get_source: Get the source code to this website
+    return_to_start: Return to the start
+    italics_bold: Italics and Bold
+    headers: Headers
+    links: Links
+    images: Images
+    blockuotes: Blockquotes
+    lists: Lists
+    paragraphs: Paragraphs
+    conclusion: Conclusion
+    dont_heroku: Don't use this ugly Heroku app URL! Check out %{link} instead.
+
+  lesson1:
+    p1: |
+        We'll start by learning two basic elements in text formatting: <em>italics</em>
+        and <strong>bold</strong>. In these lessons, you'll notice some <code>formatted red text</code>;
+        this text is actually written in Markdown! Regular Markdown doesn't look any different
+        than regular text, but we're providing some highlighting to make it easier to see.
+    p2: |
+        To make a phrase <em>italic</em> in Markdown, you can surround words with an
+        underscore (<code>_</code> ). For example, <code>_this_</code> word would become
+        <em>italic</em>.
+    p3: |
+        For this next lesson, make the word "not" italic.
+    p4: Awesome! Great job.
+    p5: |
+        Similarly, to make phrases <strong>bold</strong> in Markdown, you can surround
+        words with two asterisks ( <code>**</code> ). This will <code>**really**</code>
+        get your point across.
+    p6: In the box below, make the word "will" bold.
+    p7: Good work!
+    p8: |
+        Of course, you can use <code>_both italics and bold_</code> in the same line.
+        You can also span them <code>**across multiple words**</code>.
+    p9: In the box below, make the words "Of course" italic, and the words "a little moxie" bold.
+    p10: Fantastic!
+    p11: |
+         For the final exercise in this lesson, we're going to make some words <em>bold
+         <strong>and</strong> italic</em>.
+    p12: |
+         In general, it doesn't matter which order you place the asterisks or underscores.
+         In the box below, make the words "This is unbelievable" both bold and italic.
+         Place the asterisks <code>**_on the outside_**</code>, just to make it more legible.
+    p13: Now you know how to make things bold and italic in Markdown!

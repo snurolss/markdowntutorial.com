@@ -1,0 +1,50 @@
+de:
+  scratchpad_tooltip: Schreibst du deine Antworten in den linken Kasten, erscheint das resultierende Markdown im rechten Kasten. Wenn dein Antwort richtig ist gelangst du zur nächsten Lektion.
+  on_to_next_lesson: Auf zur nächsten Lektion!
+
+  layout:
+    get_source: Besorg dir den Quellcode für diese Webseite
+    return_to_start: Zurück zum Anfang
+    italics_bold: Kursiv und Fett
+    headers: Überschriften
+    links: Links
+    images: Bilder
+    blockquotes: Zitate
+    lists: Listen
+    paragraphs: Absätze
+    conclusion: Ende
+    dont_heroku: Nimm nich diese hässliche Heroku app URL! Schau dir lieber %{link} an.
+
+  lesson1:
+      p1: |
+          Wir beginnen indem wir zwei grundlegende Elemente der Textformatierung erlernen: <em>kursiv</em>
+          und <strong>fett</strong>. In dieser Lektion wirst du einigen <code>formatierten roten text</code> bemerken;
+          Dieser Text ist in Markdown geschrieben! Normales Markdown sieht nicht anders aus als normaler Text,
+          aber wir fügen ein paar Hervorhebungen hinzu, um einfacher lesbar zu machen.
+      p2: |
+          Um eine Phrase in Markdown <em>kursiv</em> zu machen, kannst du die Worte in
+          Unterstriche einfassen (<code>_</code> ). Z.B. <code>_dieses_</code> Wort würde
+          <em>kursiv</em> werden.
+      p3: |
+          Mache für diese Lektion das Wort "nicht" kursiv.
+      p4: Grossartig! Gute Arbeit!.
+      p5: |
+          Phrasen in Markdown <strong>fett</strong> zu machen ist sehr ähnlich.
+          Du kannst Wörter in zwei Sternchen einfassen ( <code>**</code> ).
+          Dies wird deinen Standpunkt <code>**wirklich**</code>
+          deutlich machen.
+      p6: Mache im folgenden Kasten das Wort "wird" fett.
+      p7: Gute Arbeit!
+      p8: |
+          Natürlich kannst du <code>_sowohl kursiv als auch fett_</code> mit einem Schlag machen.
+          Du kannst es auch <code>**über mehrere Worte hinweg**</code> machen.
+      p9: Mache im nächsten Kasten die Wörter "Oh natürlich" kursiv und die Wörter "ein bisschen Mut" fett.
+      p10: Fantastisch!
+      p11: |
+           Für die letzte Übung in dieser Lektion machen wir ein paar Wörter <em>fett
+           <strong>und</strong> kursiv</em>.
+      p12: |
+           Im Übrigen macht es keinen Unterschied in welcher Reihenfolge du die Sternchen oder Unterstriche setzt.
+           Mache im folgenden Kasten die Wörter "Das ist unglaublich" sowohl fett als auch kursiv.
+           Setze die Sternchen <code>**_nach aussen_**</code>, um es besser lesbar zu machen.
+      p13: Nun weisst du wie man in Markdown Sachen fett und kursiv macht!
