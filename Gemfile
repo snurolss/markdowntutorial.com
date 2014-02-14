@@ -7,6 +7,7 @@ gem 'sass', '3.2.9'
 gem 'coffee-script', '2.2.0'
 gem 'thin', '1.5.1'
 gem 'json', '~> 1.7.7'
+gem 'i18n', '0.6.9'
 
 group :development do
   gem 'shotgun', '0.9'

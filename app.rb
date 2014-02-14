@@ -2,6 +2,12 @@ require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'redcarpet'
 require 'sass'
+require 'i18n'
+
+# TODO: detect locale from browser or domain
+# TODO: include localized views if present
+I18n.default_locale = 'en'
+I18n.load_path += Dir.glob('config/locales/*.yml')
 
 class MarkdownTutorial < Sinatra::Base
   set :root, File.dirname(__FILE__)
@@ -70,6 +76,10 @@ class MarkdownTutorial < Sinatra::Base
       else
         "-blank"
       end
+    end
+
+    def t(*args)
+      trans = I18n.t(*args)
     end
   end
 end
