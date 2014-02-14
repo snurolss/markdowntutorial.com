@@ -1,3 +1,4 @@
+require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'redcarpet'
@@ -6,7 +7,6 @@ require 'i18n'
 
 # TODO: detect locale from browser or domain
 # TODO: include localized views if present
-I18n.default_locale = 'en'
 I18n.load_path += Dir.glob('config/locales/*.yml')
 
 class MarkdownTutorial < Sinatra::Base
@@ -15,6 +15,10 @@ class MarkdownTutorial < Sinatra::Base
 
   # "Thin is a supremely better performing web server so do please use it!"
   set :server, %w[thin webrick]
+
+  set :locales, %w[en de]
+  set :default_locale, 'en'
+  set :locale_pattern, /^\/?(#{Regexp.union(settings.locales)})(\/.*)$/
 
   assets {
     js :app, [
@@ -33,6 +37,7 @@ class MarkdownTutorial < Sinatra::Base
   before do
     @page_count = 0
     @is_conclusion = false
+    set_locale
     request.path_info.sub! %r{/$}, ''
   end
 
@@ -52,8 +57,13 @@ class MarkdownTutorial < Sinatra::Base
     markdown :conclusion
   end
 
-  get '/lesson/:number' do
+  get '/:lesson/:number' do
     erb :"lesson#{params[:number]}"
+  end
+
+  def set_locale
+    @locale, request.path_info = $1, $2 if request.path_info =~ settings.locale_pattern
+    I18n.locale = @locale || settings.default_locale
   end
 
   helpers do
@@ -78,8 +88,16 @@ class MarkdownTutorial < Sinatra::Base
       end
     end
 
+    def locale
+      @locale || settings.default_locale
+    end
+
     def t(*args)
       trans = I18n.t(*args)
+    end
+
+    def url_for(path)
+      url = "/#{I18n.locale}#{path}"
     end
   end
 end
